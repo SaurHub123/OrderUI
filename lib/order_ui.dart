@@ -74,11 +74,14 @@ class _OrderUIState extends State<OrderUI> {
                 ],
               ),
             ),
+            Divider(color: const Color.fromARGB(255, 82, 76, 76),),
             Container(
               height: 10.h,
               width: 100.w,
+              
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                
                 children: [
                   OutlinedButton(
                     onPressed: () {},
@@ -149,7 +152,8 @@ class _OrderUIState extends State<OrderUI> {
                   ),
                 ],
               ),
-            ), // End Button of preparing, Preparing and Picked-up
+            ), 
+            Divider(color: const Color.fromARGB(255, 82, 76, 76),),// End Button of preparing, Preparing and Picked-up
             Container(
               // height: 20.h,
               width: 100.w,
