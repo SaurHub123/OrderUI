@@ -34,7 +34,6 @@ class _OrderUIState extends State<OrderUI> {
                     value: true,
                     onChanged: (bool value) {},
                     activeColor: Colors.green,
-                    
                   ),
                   Container(
                     child: Row(
@@ -152,7 +151,7 @@ class _OrderUIState extends State<OrderUI> {
               ),
             ), // End Button of preparing, Preparing and Picked-up
             Container(
-              height: 20.h,
+              // height: 20.h,
               width: 100.w,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -285,7 +284,7 @@ class _OrderUIState extends State<OrderUI> {
                       ),
                     ),
                     SizedBox(
-                      height: 2.h,
+                      height: 1.h,
                     ),
                     Container(
                       height: 30,
@@ -336,7 +335,7 @@ class _OrderUIState extends State<OrderUI> {
                       ),
                     ),
                     SizedBox(
-                      height: 2.h,
+                      height: 1.h,
                     ),
                   ],
                 ),
@@ -389,7 +388,6 @@ class _OrderUIState extends State<OrderUI> {
                           Icons.currency_rupee,
                           color: Colors.black,
                           size: 20,
-                          
                         ),
                         Text(
                           "320",
@@ -408,8 +406,8 @@ class _OrderUIState extends State<OrderUI> {
             SizedBox(
               height: 2.h,
             ),
-            
-             Container(
+
+            Container(
               margin: const EdgeInsets.all(10),
               padding: const EdgeInsets.all(15),
               width: 100.w,
@@ -420,21 +418,26 @@ class _OrderUIState extends State<OrderUI> {
               ),
               child: Row(
                 children: [
-                  Icon(Icons.bike_scooter_sharp,
-                  size: 15,
-                  color: Colors.black,),
-                  Text("5 riders nearby assigning you soon",
-                  style: GoogleFonts.dmSans(
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.black,
-                              ),
+                  Icon(
+                    Icons.bike_scooter_sharp,
+                    size: 15,
+                    color: Colors.black,
+                  ),
+                  Text(
+                    "5 riders nearby assigning you soon",
+                    style: GoogleFonts.dmSans(
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black,
+                    ),
                   ),
                 ],
               ),
             ),
 
-            SizedBox(height: 5.h,),
+            SizedBox(
+              height: 2.h,
+            ),
             Container(
               margin: const EdgeInsets.all(10),
               padding: const EdgeInsets.all(5),
@@ -445,17 +448,47 @@ class _OrderUIState extends State<OrderUI> {
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Center(
-                child: Text("Order ready 20:00",
-                style: GoogleFonts.dmSans(
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w700,
-                              color: const Color.fromARGB(255, 15, 11, 11),
-                            ),
+                child: Text(
+                  "Order ready 20:00",
+                  style: GoogleFonts.dmSans(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w700,
+                    color: const Color.fromARGB(255, 15, 11, 11),
+                  ),
                 ),
               ),
-            )
+            ),
+            
           ],
         ),
+      ),
+      
+      
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.black,
+            ),
+            label: 'Orders',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.restaurant_menu,
+              color: Colors.black,
+            ),
+            label: 'Menu',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.bar_chart, color: Colors.black),
+            label: 'Insight',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.trending_up, color: Colors.black),
+            label: 'Growth',
+          ),
+        ],
       ),
     );
   }
